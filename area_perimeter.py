@@ -1,9 +1,9 @@
 # Area & Perimeter Program
 # S.CB
-# 21/10/26
+# 23/10/26
 
 # Width/height + number checker
-'''def num_check(question):
+def num_check(question):
 
     # Error message
     error_message = "Please enter a number more than 0.\n"
@@ -22,31 +22,23 @@
         except ValueError:
             print(error_message)
 
-# Main routine
+keep_going = ""
+while keep_going == "":
 
-# Width
-for item in range(0, 2):
+    # Get width and height
     width = num_check("Width: ")
-    print(width)
-
-# Line break
-print()
-
-# Height
-for item in range(0, 2):
     height = num_check("Height: ")
-    print(height)'''
 
-# Ask user for width and height
-# (assume valid data is inputted)
-width = float(input("Width: "))
-height = float(input("Height"))
+    # Calculate area/perimeter
+    area = width * height
+    perimeter = 2 * (width + height)
 
-# Calculate area/perimeter
-area = width * height
-perimeter = 2 * (width + height)
+    # Display output
+    print()
+    print(f"Perimeter: {perimeter} units")
+    print(f"Area: {area} square units")
 
-# Output area and perimeter
-print()
-print(f"Perimeter: {perimeter} units")
-print(f"Area: {area} square units")
+    # Ask user if they want to keep going
+    keep_going = input("Press enter to keep going or any other key to quit. ")
+
+print("Thank you for using the area/perimeter calculator :)")
